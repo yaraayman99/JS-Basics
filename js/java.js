@@ -1,186 +1,127 @@
-var start = "hello";
-    window.alert (start);
-    console.log (start);
-    console.error (start);
-    console.warn (start);
+var number =  [8 ,9 ,10,12];
+var student = [ "ahmed" , "aya" , "yara" , "ali"];
+console.log(student); 
 
-//Primitive data type//
-var text = "yara ";
-    console.log (text);
-var Student = "true";
-    console.log ("var value:", Student , "type is:" , typeof(Student) );
+var returnValue = student.push("Alaa"); //بيضيف عنصر في الاخر
+console.log(student);
+console.log(returnValue);
 
-var num1 = 80;
-    console.log (num1);
-var num2 = -80;
-    console.log (num2);
+var returnValue = student.unshift("mona");// بيضيف عنصر في الاول 
+console.log(student);
+console.log(returnValue);
 
-var isStudent = true;
-    console.log ("var value:", isStudent , "type is:" , typeof(isStudent) );
+student.pop()
+console.log(student);//بتمسح اخر عنصر وبترجعلي قيمته 
+var returnValue = student.pop()
+console.log(returnValue);
 
-var lastname;
-    console.log (lastname);
+var returnValue = number.splice (2,3);// بنحذف العنصرين دول
+console.log(number);
 
-var lastname = null;
-    console.log (lastname );
-
-var num1 = 10;
-var num2 = 20;
-    console.log(num1 + num2);
-    console.log(num1 - num2);
-    console.log(num1 ** num2);
-    console.log(num1 % num2);
-    console.log(num1 * num2);
-    console.log(num1 / num2);
-
-var x = 2;
-x -= 2;
-x=x-2;
-    console.log(x);
-
-var firstName = "Yara";
-var lastName = "Ayman";
-    console.log(firstName + " " ,lastName );
-
-var x ="2" + 2 + 2 + 2;
-    console.log(x);
-
-var x = 2 + 2 + 2 + "2" ;
-    console.log(x);
+var returnValue = student.slice (0,2);// بتاخد قطعه
+console.log(student);
+console.log(returnValue);
 
 
-var x = "ali" * "2";
-var x = Number("2") * "ali";
-    console.log(x);
+var returnValue = student.reverse();// بتعكس المصفوفه
+console.log(student);
+console.log(returnValue);
 
-var FirstName = (window.prompt ("Enter first namer"));
-var LastName = (window.prompt ("Enter last namer"));
-    console.log(FirstName ," " ,LastName);
-
-    var sentence = "I, love, web, design";
-    console.log(sentence.slice(1, 5));
-
-var textLength ="developer".length;
-    console.log(textLength);
-
-var quote = "hello \t world" ;
-console.log(quote);
-var quote = "hello \n world" ;
-console.log(quote);
+var returnValue = student.includes("mona");// بتعمل سيرش الحاجة موجودة ولا لاء
+console.log(returnValue);
 
 
-//converting //
-var Hour = 10;
-    if (Hour >= 0 && Hour <=11) {
-        console.log("good morning");
-}else if (Hour>=12 && Hour <=17){
-    console.log("good afternoon");
-}else if (Hour>=18 && Hour <=23) {
-    console.log("good evening");
-}else{
-    console.log("an correct Hour");
+var returnValue = student.indexOf("mona");// رقم المكان اللي العنصر فيه
+console.log(returnValue);
+
+
+var stringArray = student.toString(); //بيحولهم ل string
+console.log(stringArray);
+
+//string 
+var myString = "hello in the our company"
+var check =myString.charAt (4);//المكان اللي هترجع منه 
+console.log(check);
+
+var check =myString.charCodeAt(3);//الكود بتاع الحرف 
+console.log(check);
+
+var check =myString.codePointAt(2);// احدث الكود بتاع الحرف 
+console.log(check);
+
+var check =myString.concat("laa");// بتزود على الكود
+console.log(check);
+
+var check =myString.endsWith ("company");// بتشوف اذا كانت بتنتهي بالحاجة دي ولا لاء
+console.log(check);
+
+var check =myString.toLocaleLowerCase();// بتشوف اذا كانت بتنتهي بالحاجة دي ولا لاء
+console.log(check);
+
+var check =myString.split("in")//بتقسم من اول 
+console.log(check);
+
+var check =myString.trimEnd();//بتشيل المسافه من الاول 
+console.log(check);
+
+var check =myString.replaceAll("in" ,"and");// بتبدل العنصر 
+console.log(check);
+
+var check =myString.padEnd(25 , "!");// بتزود في الاخر
+console.log(check);
+
+//dom
+var element= document.getElementById("demo");
+
+var elements = document.getElementsByClassName("items") 
+console.log(typeof("item"));
+
+var elements = document.getElementsByTagName("h1") 
+console.log(elements);
+
+var elements =document.querySelectorAll("div");
+console.log(elements);
+
+var elements = document.querySelectorAll(" * [name='test'] ")
+console.log(elements);
+
+var elements =document.querySelectorAll("#demo");
+console.log(elements);
+
+var elements =document.querySelector(".items");
+console.log(elements);
+
+var elements =document.querySelectorAll(".items");
+console.log(elements);
+
+var heading =document.querySelectorAll("h3.h3");
+console.log(heading);
+
+function sayHello(userName) {
+console.log("Hello", userName);
 }
+sayHello("yara");
 
-var num1 =20;
-var num2 =10;
-var operator = "-";
+document.body.addEventListener ("click" , function(e){
+console.log("Hello");
+console.log(Hello .clientX); //محور x
+console.log(Hello .target);//مكان ما الماوس بيقف
+});
 
-switch(operator){
+document.body.addEventListener ("Keydown" , function(e){
+console.log(e);
+console.log(eKey); 
+});
 
-    case "+":
-
-        console.log(num1 + num2 );
-
-    break;
-
-    case "-":
-
-        console.log(num1 - num2 );
-
-    break; 
-
-    case "/":
-
-        console.log(num1 / num2 );
-    break;
-
-    case "*":
-
-    console.log(num1 * num2 );   
-
-    break;
-
-    case "%":
-
-    console.log(num1% num2 );  
-
-    break;
-
-    default:
-        console.log("incorrect operation");  
-}
+document.body.addEventListener ("contextmenu" , function(e){//right click
+console.log("Hello");
+e.preventDefault();//بيمنع السلوك الافتراضي لحدث معين على العنصر
+})
 
 
-var num = 9;
+var h1 =document.querySelector("h1");
+document.body.addEventListener ("mouseenter", function(){ //لما الماوس يدخل على اي عنصر
+h1.style.cssText = "color:black; background-color:black;"
+})
 
-var result =num ? "value is true"  : "value is false";
-
-    console.log(result);
-
-
-for (var i =0;i <20;i++){
-    console.log(i);
-}
-
-var i =0;
-while(i<=10){
-    console.log(i);
-    i++
-}
-
-var i =0;
-do{
-    console.log(i);
-    i++
-}while (i<=10);
-
-function calculateResult (mark1 , mark2 ,mark3){
-    var avg = mark1 + mark2 + mark3 / 3;
-    if (avg == 85){
-        return ("excellent");
-
-    } else if (avg ==70){
-        return ("very good");
-    }else if (avg == 60){
-        return ("good");
-    }else{
-        return ("fail");
-    }
-}
-var Result = calculateResult(80,90,70);
-    console.log(Result);
-
-var Student ={
-    name:"ali",
-    age:20,
-    Subjects:{
-
-        math :{
-            score: 90,
-            grade: Good,
-        },
-
-        english: {
-            score: 80,
-            grade: Good,
-        },
-        arabic: {
-            score: 70,
-            grade: Good,
-        },
-        },
-        love:{
-            art ,
-        }
-    }
 
